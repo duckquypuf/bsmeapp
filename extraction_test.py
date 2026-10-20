@@ -3,7 +3,8 @@ import pandas as pd
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sheet_id = "1oTXNazg0q_ztCSXsV4Vm1fDpTJURkD_5X4hDgvcefZs"
-
+def useless_function():
+  print("virat is a germ")
 
 def get_google_sheet(sheet_id):
   url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
