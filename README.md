@@ -19,3 +19,5 @@ If you wish to edit something bigger than a small bug, click 'branches' then 'cr
 - When you have completed your entire task with your branch, click merge with main or something and yeah ask someone pls.
 
 However, if you only wish to edit a small bug, you may do so on your local machine on the main branch then commit and push to origin.
+
+virats a bum
