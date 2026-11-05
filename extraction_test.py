@@ -33,7 +33,7 @@ def get_google_sheet(sheet_id):
   print(df.columns.tolist())
   return df
 
-
+#i
 # 1. Get the cleaned DataFrame
 df = get_google_sheet(sheet_id)
 
