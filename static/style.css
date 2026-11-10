@@ -39,6 +39,11 @@ h1, h2 {
     text-decoration: none;
 }
 
+.player-selector {
+    display: flex;
+    flex-direction: column;
+}
+
 tbody tr {
     background-color: rgb(240, 240, 240);
 }
