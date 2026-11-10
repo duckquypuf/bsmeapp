@@ -19,3 +19,30 @@ main {
 h1, h2 {
     text-align: center;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #2b2d42;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+tbody tr {
+    background-color: rgb(240, 240, 240);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(200, 200, 200);
+}
