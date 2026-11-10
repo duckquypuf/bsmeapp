@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>My Mobile Site (BSME)</title>
+  <title>BSME App 2027</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -9,15 +9,15 @@
     <h1>BSME App 2027</h1>
   </header>
 
-  <main>
-    <div class="navbar">
-      <nav class="nav-links">
-        <a href="#overall-section">Overall Performance</a>
-        <a href="#football-section">Football</a>
-        <a href="#swimming-section">Swimming</a>
-      </nav>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#overall-section">Overall Performance</a>
+      <a href="#football-section">Football</a>
+      <a href="#swimming-section">Swimming</a>
     </div>
+  </nav>
 
+  <main>
     <h2>Track your child's progress here:</h2>
     <form class="player-selector" method="post" action="/player">
       <h4>Input Player Name:</h4>
@@ -55,6 +55,8 @@
       </table>
     </div>
 
+    <!-- TODO: maybe either make each sport a seperate html file (with templates) or if preffered just keep 
+     all on the home page or on one page with ofc a table for each sport and the standings-->
     <div id="football-section">
       <h3>Football</h3>
     </div>
