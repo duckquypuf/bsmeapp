@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ player_name }}'s Performance | BSME 2027</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>BSME App 2027</h1>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#overall-section">Overall Performance</a>
+      <a href="#football-section">Football</a>
+      <a href="#swimming-section">Swimming</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="overall-section">
+      <h2>{{ player_name }}'s BSME Performance</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Sport</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for activity in activities %}
+          <tr>
+            <td>{{ activity.sport }}</td>
+            <td>{{ activity.wins }}</td>
+            <td>{{ activity.losses }}</td>
+            <td>{{ activity.draws }}</td>
+            <td>{{ activity.points }}</td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="5">No sports activity data found for this player.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
