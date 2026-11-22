@@ -4,7 +4,8 @@ body {
 }
 
 header {
-    background-color: rgb(255, 120, 120);
+    background-color: rgb(228, 74, 74);
+    color: white;
     text-align: center;
     padding: 5px;
     margin: 0 auto;
@@ -18,4 +19,36 @@ main {
 
 h1, h2 {
     text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #303458;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.player-selector {
+    display: flex;
+    flex-direction: column;
+}
+
+.sport-table tbody tr {
+    background-color: rgb(240, 240, 240);
+}
+
+.sport-table tbody tr:nth-child(even) {
+    background-color: rgb(200, 200, 200);
 }

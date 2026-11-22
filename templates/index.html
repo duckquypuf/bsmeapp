@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>My Mobile Site BSME</title>
+  <title>BSME App 2027</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -9,20 +9,57 @@
     <h1>BSME App 2027</h1>
   </header>
 
-  <main>
-    <div>
-      <nav>
-        <a href="football.html">Football</a>
-        <a href="swimming.html">Swimming</a>
-      </nav>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#overall-section">Overall Performance</a>
+      <a href="#football-section">Football</a>
+      <a href="#swimming-section">Swimming</a>
     </div>
+  </nav>
 
+  <main>
     <h2>Track your child's progress here:</h2>
-    <form>
-      <h4>Input Player Name:</h6>
-      <input title="Name"><br><br>
+    <form class="player-selector" method="post" action="/player">
+      <h4>Input Player Name:</h4>
+      <input title="Name" name="player_name">
       <button type="submit">Submit</button>
     </form>
+
+    <div id="overall-section">
+      <h3>Current Table</h3>
+      <table class="sport-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>School</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>St. Christopher's School Bahrain</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>other school</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>other cavaliers</td>
+            <td>19</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TODO: maybe either make each sport a seperate html file (with templates) or if preffered just keep 
+     all on the home page or on one page with ofc a table for each sport and the standings-->
+    <div id="football-section">
+      <h3>Football</h3>
+    </div>
   </main>
 </body>
 </html>
