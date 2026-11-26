@@ -1,5 +1,5 @@
 import ssl
-import pandas as pd
+import pandas as pd #type: ignore
 ssl._create_default_https_context = ssl._create_unverified_context
 
 sheet_id = "1oTXNazg0q_ztCSXsV4Vm1fDpTJURkD_5X4hDgvcefZs"
