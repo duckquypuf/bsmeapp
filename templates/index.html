@@ -38,21 +38,17 @@
           </tr>
         </thead>
         <tbody>
+          {% for school in schools %}
           <tr>
-            <td>1</td>
-            <td>St. Christopher's School Bahrain</td>
-            <td>38</td>
+            <td>{{ school.pos }}</td>
+            <td>{{ school.name }}</td>
+            <td>{{ school.points }}</td>
           </tr>
+          {% else %}
           <tr>
-            <td>2</td>
-            <td>other school</td>
-            <td>23</td>
+            <td colspan="5">No sports activity data found for this player.</td>
           </tr>
-          <tr>
-            <td>3</td>
-            <td>other cavaliers</td>
-            <td>19</td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
