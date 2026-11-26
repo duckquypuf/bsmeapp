@@ -1,0 +1,2 @@
+dumy sheet
+show schools/leaderboard on refresh
