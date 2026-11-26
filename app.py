@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request #type: ignore
+
 schools = [
     {'name': 'St. Christophers School', 'points':20, 'position':9},
 ]
