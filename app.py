@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request #type: ignore
+schools = [
+    {'school': 'St. Christophers School', 'position' :  '9'},
+]
 
 app = Flask(__name__)
-
 @app.route('/')
 def home():
-    return render_template('index.html', schools=schools)
+    return render_template('index.html')
 
 @app.route('/player', methods=['POST'])
 def player_view():
