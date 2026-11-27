@@ -20,14 +20,18 @@
   </nav>
 
   <main>
-    <h2>Track your child's progress here:</h2>
-    <form class="player-selector" method="post" action="/player">
-      <h4>Input Player Name:</h4>
-      <input title="Name" name="player_name">
-      <button type="submit">Submit</button>
-    </form>
+    <section>
+      <h2>Track your child's progress here:</h2>
+      <form class="player-selector" method="post" action="/player">
+        <label for="player-name">Enter Player Name</label>
+        <div class="input-group">
+          <input id="player_name" class="form-input" type="text" name="player_name">
+          <button class="form-btn" type="submit">Search</button>
+        </div>
+      </form>
+    </section>
 
-    <div id="overall-section">
+    <section id="overall-section">
       <h3>Current Table</h3>
       <table class="sport-table">
         <thead>
@@ -46,39 +50,45 @@
           </tr>
           {% else %}
           <tr>
-            <td colspan="5">No sports activity data found for this player.</td>
+            <td colspan="3">No sports activity data found for this player.</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
     </div>
     
-    <div id="football-section">
+    <section id="football-section">
       <h3>Football</h3>
       <table class="sport-table">
         <thead>
           <tr>
             <th>Position</th>
             <th>School</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>Wins</th>
+            <th>Draws</th>
+            <th>Losses</th>
             <th>Points</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>St. Christopher's School Bahrain</td>
-            <td>38</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>other school</td>
-            <td>23</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>other cavaliers</td>
-            <td>19</td>
-          </tr>
+          {% for standing in football_standings %}
+            <tr>
+              <td>{{ standing.position }}</td>
+              <td>{{ standing.school }}</td>
+              <td>{{ standing.gf }}</td>
+              <td>{{ standing.ga }}</td>
+              <td>{{ standing.wins }}</td>
+              <td>{{ standing.draws }}</td>
+              <td>{{ standing.losses }}</td>
+              <td>{{ standing.points }}</td>
+            </tr>
+            {% else %}
+            <tr>
+              <td colspan="8">No sports activity data found for this sport.</td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>

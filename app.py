@@ -1,13 +1,29 @@
 from flask import Flask, render_template, request #type: ignore
 
 schools = [
-    {'name': 'St. Christophers School', 'points':20, 'position':9},
+    {'name':'St. Christophers School','points':20,'position':9},
+]
+
+football = [
+   {'school':'St. Christophers School','gf':15,'ga':10,'wins':3,'draws':4,'losses':3,'points':9,'position':2},
+]
+
+# School: list of players
+# structure can be changed
+players = [
+   {
+      'school':'St. Christophers School',
+      'name':'someone',
+      'sports':[
+            {'sport':'football','goals':2},
+      ],
+   },
 ]
 
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return render_template('index.html', schools=schools)
+    return render_template('index.html', schools=schools, football_standings=football)
 
 @app.route('/player', methods=['POST'])
 def player_view():
