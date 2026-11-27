@@ -42,6 +42,18 @@ main {
 
 h2 {
     text-align: center;
+    color: var(--school-blue);
+    margin-bottom: 1.25rem;
+    font-size: 1.4rem;
+}
+
+h3 {
+    color: var(--school-blue);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--school-red);
+    padding-bottom: 0.4rem;
+    display: inline-block;
 }
 
 .navbar {
@@ -148,10 +160,10 @@ h2 {
     border-bottom: 1px solid var(--border-color);
 }
 
-.sport-table tbody tr {
-    background-color: rgb(240, 240, 240);
+.sport-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
 }
 
-.sport-table tbody tr:nth-child(even) {
-    background-color: rgb(200, 200, 200);
+.sport-table tbody tr:hover {
+    background-color: #eef4f7;
 }
