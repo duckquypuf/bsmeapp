@@ -3,6 +3,7 @@
     --school-red: #db0032;
     --school-red-hover: #b8002a;
     --text-muted: #64748b;
+    --border-color: #e2e8f0;
 }
 
 * {
@@ -55,6 +56,16 @@ h1, h2 {
 .nav-links a {
     color: white;
     text-decoration: none;
+}
+
+.card-section {
+    background: white;
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    scroll-margin-top: 4.5rem;
 }
 
 .player-selector {

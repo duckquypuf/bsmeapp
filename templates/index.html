@@ -20,7 +20,7 @@
   </nav>
 
   <main>
-    <section>
+    <section class="card-section">
       <h2>Track your child's progress here:</h2>
       <form class="player-selector" method="post" action="/player">
         <label for="player-name">Enter Player Name</label>
@@ -31,7 +31,7 @@
       </form>
     </section>
 
-    <section id="overall-section">
+    <section id="overall-section" class="card-section">
       <h3>Current Table</h3>
       <table class="sport-table">
         <thead>
@@ -55,9 +55,9 @@
           {% endfor %}
         </tbody>
       </table>
-    </div>
+    </section>
     
-    <section id="football-section">
+    <section id="football-section" class="card-section">
       <h3>Football</h3>
       <table class="sport-table">
         <thead>
@@ -91,4 +91,7 @@
           {% endfor %}
         </tbody>
       </table>
-    </div>
+    </section>
+  </main>
+</body>
+</html>
